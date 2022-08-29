@@ -66,7 +66,7 @@ req = https.request(options, data => {
     data.on('data', (body) => {
         console.log('Body: ');
         console.log(JSON.parse(body).payUrl);
-        res.redirect(JSON.parse(body).payUrl);
+        //res.redirect(JSON.parse(body).payUrl);
     });
     res.on('end', () => {
         console.log('No more data in response.');
