@@ -28,7 +28,8 @@ exports.MOMO = async (req,res,next)=>{
     var orderInfo = "Thanh toán đơn hàng";
     var redirectUrl = "https://momo.vn/return";
     var ipnUrl = "https://callback.url/notify";
-    var amount = req.body.amount;
+    var amount = req.body.price;
+    console.log(req.body.data);
     var requestType = "captureWallet"
     var extraData = ""; 
     var rawSignature = "accessKey="+accessKey+"&amount=" + amount+"&extraData=" + extraData+"&ipnUrl=" + ipnUrl+"&orderId=" + orderId+"&orderInfo=" + orderInfo+"&partnerCode=" + partnerCode +"&redirectUrl=" + redirectUrl+"&requestId=" + requestId+"&requestType=" + requestType
